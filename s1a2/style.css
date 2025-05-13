@@ -1,0 +1,234 @@
+/* Background container */
+#still-life {
+    position: relative;
+    overflow: hidden;
+    background-color: #efdcb7;
+    width: 800px;
+    height: 600px;
+    border: 5px solid black;
+  }
+  
+  /* Book element */
+  #book {
+    position: absolute;
+    top: 100px;
+    left: -10px;
+    width: 300px;
+    height: 400px;
+    background-color: #ffed00;
+    border: 2px solid #e6d500;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3),
+                -5px -5px 10px rgba(255, 255, 255, 0.2);
+    transform: rotate(10deg);
+  }
+  
+  #inside-book {
+    position: relative;
+    top: 50px;
+    left: 25px;
+    width: 250px;
+    height: 300px;
+    border: 2px solid #5d565a;
+    background-color: #ffffff;
+  }
+  
+  #inside-book-text {
+    position: relative;
+    top: -300px;
+    left: 50px;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #222;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  #inside-book-text:hover {
+    color: #ff5733;
+  }
+  
+  #inside-book-text::after {
+    content: " (Click to Copy)";
+    font-size: 16px;
+    color: #666;
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #inside-book-text:hover::after {
+    opacity: 1;
+  }
+  
+  #inside-book-description {
+    position: relative;
+    top: -340px;
+    left: 50px;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 20px;
+    color: #5d565a;
+  }
+  
+  /* Bottle stem */
+  #bottle-stem {
+    position: absolute;
+    top: 330px;
+    left: 185px;
+    width: 150px;
+    height: 100px;
+    background-color: #463018;
+    border-radius: 40px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4),
+                inset 3px 3px 8px rgba(255, 255, 255, 0.2);
+    transform: rotate(65deg);
+  }
+  
+  /* Bottle cap */
+  #bottle-cap {
+    position: absolute;
+    top: 300px;
+    left: 183px;
+    width: 100px;
+    height: 40px;
+    background-color: #b9aca1;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4),
+                inset 3px 3px 8px rgba(255, 255, 255, 0.2);
+    transform: rotate(-25deg);
+  }
+  
+  /* Bottle body */
+  #bottle {
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    width: 200px;
+    height: 120px;
+    background-color: #463018;
+    border-radius: 25px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(65deg);
+  }
+  
+  #bottle-label-white {
+    position: relative;
+    width: 160px;
+    left: 19px;
+    height: 120px;
+    background-color: #e6dcd1;
+    border-radius: 10px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4),
+                inset 3px 3px 8px rgba(255, 255, 255, 0.2);
+  }
+  
+  #bottle-label-blue {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    top: -115px;
+    left: 30px;
+    background-color: #3f3657;
+    border-radius: 6px;
+  }
+  
+  #bottle-label-red {
+    position: relative;
+    top: -300px;
+    left: -6px;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #a93231;
+    transform: rotate(-90deg);
+  }
+  
+  /* Color wheel */
+  #color-wheel {
+    position: absolute;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4),
+                inset -5px -5px 10px rgba(0, 0, 0, 0.2);
+    top: 300px;
+    left: 500px;
+    width: 350px;
+    height: 350px;
+    background: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .spin-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    animation: spin 4s linear infinite;
+  }
+  
+  #inner-circle {
+    width: 250px;
+    height: 250px;
+    background: #f6eee4;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  #inner-circle-text {
+    position: absolute;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: #a93231;
+  }
+  
+  /* Blue Book */
+  #blue-book {
+    position: absolute;
+    top: 120px;
+    left: 270px;
+    width: 320px;
+    height: 450px;
+    background-color: #a4b8c3;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(30deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .white-box {
+    width: 320px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+  }
+  
+  #blue-book-text {
+    position: relative;
+    top: -5px;
+    left: -30px;
+    font-family: timesnewroman;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  

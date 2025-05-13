@@ -1,10 +1,9 @@
 document.querySelectorAll('.heart').forEach(el => {
-    el.addEventListener('mouseover', () => {
-      el.style.transform = 'scale(1.05)';
-    });
-  
-    el.addEventListener('mouseout', () => {
-      el.style.transform = 'scale(1)';
-    });
+  el.addEventListener('mouseover', () => {
+    el.style.transform = 'scale(1.05)';
   });
-  
+
+  el.addEventListener('mouseout', () => {
+    el.style.transform = 'scale(1)';
+  });
+});
